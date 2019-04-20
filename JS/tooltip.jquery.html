@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tooltip-jquery</title>
+
+  <style>
+    #link-tooltip {
+      position: absolute;
+      z-index: 100;
+      top: 200px;
+      left: 300px;
+      min-width: 80px;
+      max-width: 220px;
+      width: auto;
+      font-size: 12px;
+      padding: 3px 12px;
+      background: #eee;
+      background: rgba(238, 238, 238, 0.8);
+      ;
+      border-radius: 3px;
+      line-height: 18px;
+      color: #333;
+      display: none
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="tooltip" title="Hello World!">Hello World</div>
+
+  <script src="./jquery.min.js"></script>
+  <script>
+    var x = 0;
+    var y = 20;
+    $(".tooltip").mousemove(function (e) {
+      var linkTooltip = $("#link-tooltip");
+      if (!linkTooltip.length) {
+        this.tooltipTitle = this.title;
+        this.title = "";
+        linkTooltip = $("<div id='link-tooltip'><div class='tooltip-content'>" + this.tooltipTitle + "</div></div>");
+        $("body").append(linkTooltip);
+      }
+
+      linkTooltip.css({
+        "top": (e.pageY + y) + "px",
+        "left": (e.pageX + x) + "px"
+      }).fadeIn();
+
+    }).mouseout(function () {
+      this.title = this.tooltipTitle;
+      $("#link-tooltip").remove();
+    });
+  </script>
+</body>
+
+</html>
