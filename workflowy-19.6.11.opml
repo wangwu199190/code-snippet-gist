@@ -1,0 +1,308 @@
+﻿<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <ownerEmail>
+      wangwu199190@gmail.com
+    </ownerEmail>
+  </head>
+  <body>
+    <outline text="卡片">
+      <outline text="方法">
+        <outline text="&lt;b&gt;卡片写什么&lt;/b&gt;">
+          <outline text="&lt;b&gt;术语卡&lt;/b&gt;：阅读中出现过的学术术语或者作者特定黑话" />
+          <outline text="&lt;b&gt;人名卡&lt;/b&gt;：阅读中出现过的人名，以及他的个人简介如何" />
+          <outline text="&lt;b&gt;反常识卡&lt;/b&gt;：有什么理论模型/推断证据/故事/行动，挑战了你的既有常识" />
+          <outline text="金句卡：收集性感的句子" />
+          <outline text="行动卡：写下你可以执行的行动" />
+          <outline text="技巧卡：积累你学到的技巧" />
+          <outline text="任意卡：此处自行发挥" />
+        </outline>
+      </outline>
+      <outline text="Card">
+        <outline text="Tech">
+          <outline text="JS">
+            <outline text="模块（module） ">
+              <outline text="传统的通过 &amp;lt;script&amp;gt; 标签加载代码的方式导致了&lt;b&gt;诸多问题&lt;/b&gt;，例如命名冲突、安全问题等。 ES6 的设计目标之一就是要&lt;b&gt;解决作用域问题&lt;/b&gt;，并让 JS 应用变得更有条理。这便是模块的切入点。" />
+              <outline text="何为模块？">
+                <outline text="1、 模块代码自动运行在&lt;b&gt;严格模式&lt;/b&gt;下，并且没有任何办法跳出严格模式；" />
+                <outline text="2、在模块的顶级&lt;b&gt;作用域&lt;/b&gt;创建的变量，不会被自动添加到共享的全局作用域，它们只会在模块顶级作用域的内部存在； " />
+                <outline text="3、 模块顶级作用域的 &lt;b&gt;this&lt;/b&gt; 值为 undefined （不是 window）；" />
+                <outline text="4、模块不允许在代码中使用 HTML 风格的&lt;b&gt;注释&lt;/b&gt;（这是 JS 来自于早期浏览器的历史遗留特 性）；" />
+                <outline text=" 5、 对于需要让模块外部代码访问的内容，模块必须&lt;b&gt;导出&lt;/b&gt;它们；" />
+                <outline text=" 6、 允许模块从其他模块&lt;b&gt;导入&lt;/b&gt;绑定。" />
+              </outline>
+              <outline text="导入导出">
+                <outline text="模块的真实力量是&lt;b&gt;按需导出与导入&lt;/b&gt;代码的能力，而不用将所有内容放在同一 个文件内。对于导出与导入的清楚理解，是辨别模块与脚本差异的基础。" />
+                <outline text="模块功能主要由两个命令构成：&lt;b&gt;export 和 import&lt;/b&gt;。export 命令用于规定模块的对外接口，import 命令用于输入其他模块提供的功能。" />
+              </outline>
+            </outline>
+            <outline text="React">
+              <outline text="清楚两个概念：">
+                <outline text="library（库）：小而巧的库，只提供了特定的 API；优点就是船小好掉头，可以很方便的从一个库切换到另外的库；但是代码几乎不会改变；" />
+                <outline text="Framework（框架）：大而全的是框架；框架提供了一整套的解决方案；所以，如果在项目中间，想切换到另外的框架，是比较困难的；" />
+              </outline>
+              <outline text="生命周期">
+                <outline text="⁉️ Q &amp;amp; A">
+                  <outline text="数据请求放在哪个环节？">
+                    <outline text="&lt;b&gt;componentDidMount&lt;/b&gt;" _note="总有开发者问，为什么不在 componentWillMount 里写 AJAX 获取数据的功能，他们的观点是， componentWillMount 在 render 之前执行，早一点执行早得到结果。&#10;&#10;要知道，在 componentWillMount 里发起 AJAX，不管多快得到结果也赶不上首次 render，而且 componentWillMount 在服务器端渲染也会被调用到（当然，也许这是预期的结果），这样的 IO 操作放在 componentDidMount 里更合适。&#10;&#10;在 Fiber 启用 async render 之后，更没有理由在 componentWillMount 里做 AJAX，因为 componentWillMount 可能会被调用多次，谁也不会希望无谓地多次调用 AJAX 吧。" />
+                  </outline>
+                </outline>
+                <outline text="学习参考">
+                  <outline text="[React v16.3之后的组件生命周期函数 - 知乎](https://zhuanlan.zhihu.com/p/38030418)" />
+                </outline>
+              </outline>
+              <outline text="组件">
+                <outline text="组件化">
+                  <outline text="什么是&lt;b&gt;模块化&lt;/b&gt;：是从&lt;u&gt;代码的角度&lt;/u&gt;来进行分析的；把一些可复用的代码，抽离为单个的模块；便于项目的维护和开发；" />
+                  <outline text="什么是&lt;b&gt;组件化&lt;/b&gt;： 是从 &lt;u&gt;UI 界面的角度&lt;/u&gt;来进行分析的；把一些可复用的 UI 元素，抽离为单独的组件；便于项目的维护和开发；" />
+                </outline>
+                <outline text="高阶组件（HOC）">
+                  <outline text="什么是高阶组件？">
+                    <outline text="高阶组件就是一个&lt;b&gt;函数&lt;/b&gt;，且该函数接受一个组件作为参数，并返回一个&lt;b&gt;新的组件&lt;/b&gt;。" _note="const NewComponent = higherOrderComponent(OldComponent)" />
+                    <outline text="这个新的组件会将传入的组件作为&lt;b&gt;子组件&lt;/b&gt;" _note="import React, { Component } from 'react'&#10;&#10;export default (WrappedComponent) =&amp;gt; {&#10;  class NewComponent extends Component {&#10;    // 可以做很多自定义逻辑&#10;    render () {&#10;      return &amp;lt;WrappedComponent /&amp;gt;&#10;    }&#10;  }&#10;  return NewComponent&#10;}" />
+                    <outline text="新组件和旧组件通过 props 传递信息。">
+                      <outline text="新组件的 props 不能直接在旧组件中使用，需要通过新组件再次转传给旧组件。" _note="此特性使得可以在新组件中对 props 进行增减" />
+                    </outline>
+                  </outline>
+                  <outline text="解决什么问题？">
+                    <outline text="提高代码&lt;b&gt;复用度&lt;/b&gt;：当&lt;u&gt;多个组件需要某个功能，且这个功能和 UI 并没有关系&lt;/u&gt;，所以不能简单的抽取成一个新的组件，但是如果让同样的逻辑在各个组件里各自实现，无疑会导致重复的代码。" _note="export default (WrappedComponent, name) =&amp;gt; {&#10;  class LocalStorageActions extends Component {&#10;    constructor () {&#10;      super()&#10;      this.state = { data: null }&#10;    }&#10;&#10;    componentWillMount () {&#10;      let data = localStorage.getItem(name)&#10;      try {&#10;        // 尝试把它解析成 JSON 对象&#10;        this.setState({ data: JSON.parse(data) })&#10;      } catch (e) {&#10;        // 如果出错了就当普通字符串读取&#10;        this.setState({ data })&#10;      }&#10;    }&#10;&#10;    saveData (data) {&#10;      try {&#10;        // 尝试把它解析成 JSON 字符串&#10;        localStorage.setItem(name, JSON.stringify(data))&#10;      } catch (e) {&#10;        // 如果出错了就当普通字符串保存&#10;        localStorage.setItem(name, `${data}`)&#10;      }&#10;    }&#10;&#10;    render () {&#10;      return (&#10;        &amp;lt;WrappedComponent&#10;          data={this.state.data}&#10;          saveData={this.saveData.bind(this)}&#10;          // 这里的意思是把其他的参数原封不动地传递给被包装的组件&#10;          {...this.props} /&amp;gt;&#10;      )&#10;    }&#10;  }&#10;  return LocalStorageActions&#10;}" />
+                    <outline text="高阶组件的&lt;b&gt;灵活性&lt;/b&gt;：代码复用的方法、形式有很多种，你可以用类继承来做到代码复用，也可以分离模块的方式。但是高阶组件这种方式很有意思，也很灵活。学过设计模式的同学其实应该能反应过来，它其实就是设计模式里面的&lt;b&gt;装饰者模式&lt;/b&gt;。" />
+                  </outline>
+                  <outline text="与结合&lt;b&gt;装饰器&lt;/b&gt;（decorator）" _note="@HocUinfo&#10;export default class Ucenter extends Component {&#10;  render() {&#10;    ...&#10;  }&#10;}" />
+                  <outline text="👉 注意！！">
+                    <outline text="不要在 render 方法中使用 HOC" _note="因为 HOC 会返回个新组件，从而导致其重新挂载。这不仅仅是性能问题 - 重新挂载组件会导致该组件及其所有子组件的状态丢失。" />
+                    <outline text="Refs 不会被传递" _note="虽然高阶组件的约定是将所有 props 传递给被包装组件，但这对于 refs 并不适用。那是因为 ref 实际上并不是一个 prop - 就像 key 一样，它是由 React 专门处理的。如果将 ref 添加到 HOC 的返回组件中，则 ref 引用指向容器组件，而不是被包装组件。" />
+                  </outline>
+                  <outline text="参考">
+                    <outline text="recompose ：React 技术栈的 lodash，提供了许多用于创建 react &lt;b&gt;函数式组件和高阶组件&lt;/b&gt;的工具函数，包括 compose、branch、withState、withStateHandlers等（作者建议使用 Hooks，因为 它解决了此工具的所有问题）" _note="https://github.com/acdlite/recompose" />
+                    <outline text="[高阶组件（Higher-Order Components） | React.js 小书](http://huziketang.mangojuice.top/books/react/lesson28)" />
+                    <outline text="[当初要是看了这篇，React高阶组件早会了 - WEB前端 - 伯乐在线](http://web.jobbole.com/95306/)" />
+                    <outline text="[助你完全理解React高阶组件（Higher-Order Components） · Issue #2 · brickspert/blog](https://github.com/brickspert/blog/issues/2)" />
+                  </outline>
+                </outline>
+                <outline text="PureComponent 组件">
+                  <outline text="👉 注意！！">
+                    <outline text="当 &lt;b&gt;shouldComponentUpdate&lt;/b&gt; 返回 true 时 PureComponent 的作用将失效" />
+                  </outline>
+                </outline>
+                <outline text="shouldComponentUpdate 生命周期">
+                  <outline text="👉 注意！！">
+                    <outline text="shouldComponentUpdate 在以下场景中将&lt;b&gt;失效&lt;/b&gt;">
+                      <outline text="当 children 的值是 elelment、array时，&lt;b&gt;通过 children 来比较时，其绐终为 true。&lt;/b&gt;">
+                        <outline text="children 是一个比较复杂的对象，每次组件更新的时候都会重新构造，也就是说 children 是动态构建的，因此每次更新的时候都是不相等的。所以 shouldComponentUpdate 每次都会返回 true，因此组件每次都会重新渲染。" _note="class Parent extends Component {&#10;  &#10;  shouldComponentUpdate(nextProps) {&#10;      return this.props.children != nextProps.children;&#10;  }&#10;&#10;  render() {&#10;      return &amp;lt;div&amp;gt;{this.props.children}&amp;lt;/div&amp;gt;;&#10;  }&#10;&#10;}&#10;&#10;setInterval(() =&amp;gt; {&#10;  ReactDOM.render(&#10;      &amp;lt;Parent&amp;gt;&#10;          &amp;lt;div&amp;gt;child&amp;lt;/div&amp;gt;&#10;      &amp;lt;/Parent&amp;gt;&#10;  );&#10;}, 1000);" />
+                        <outline text="解决方案">
+                          <outline text="第三方库：https://www.npmjs.com/package/shouldcomponentupdate-children" />
+                        </outline>
+                      </outline>
+                    </outline>
+                  </outline>
+                </outline>
+              </outline>
+              <outline text="render">
+                <outline text="" />
+                <outline text="render 支持返回数组和字符串——v16.0" _note="render() {&#10;    return [&#10;      &amp;lt;li&amp;gt;1&amp;lt;/li &amp;gt;,&#10;      &amp;lt;li&amp;gt;2&amp;lt;/li &amp;gt;,&#10;      &amp;lt;li&amp;gt;3&amp;lt;/li &amp;gt;,&#10;    ];&#10;  }" />
+              </outline>
+              <outline text="性能">
+                <outline text="动静分离">
+                  <outline text="通过&lt;b&gt;把变化的属性和不变的属性进行分离&lt;/b&gt;，减少重新渲染，获得性能的提升，同时这样做也能够让组件更容易进行分离，更好的被复用。" />
+                  <outline text="例：当做滚到底部加载更多内容" _note="&amp;lt;OuterScroll&amp;gt;&#10;	&amp;lt;ItemWrap width={300} color='blue'/&amp;gt;&#10;&amp;lt;/OuterScroll&amp;gt;">
+                    <outline text="ItemWrap 这个组件的 props 是固定的不会发生变化，在其内部使用 PureComponent 等保证其不随父组件（OuterScroll）状态变化而重新渲染。也就是子组件隔离了父组件的状态变化。" />
+                  </outline>
+                </outline>
+                <outline text="按需加载">
+                  <outline text="react-loadable " />
+                </outline>
+                <outline text="缓存">
+                  <outline text="" />
+                </outline>
+                <outline text="参考">
+                  <outline text="[高性能 React 组件 | Taobao FED | 淘宝前端团队](http://taobaofed.org/blog/2016/08/12/optimized-react-components/)" />
+                </outline>
+              </outline>
+              <outline text="异常处理">
+                <outline text="错误边界（Error Boundaries）">
+                  <outline text="解决什么问题？">
+                    <outline text="部分 UI 的 JavaScript 错误不应该导致&lt;b&gt;整个应用崩溃&lt;/b&gt;" />
+                    <outline text="错误边界是一种 &lt;b&gt;React 组件&lt;/b&gt;，这种组件&lt;u&gt;可以捕获并打印发生在其子组件树任何位置的 JavaScript 错误，并且，它会渲染出备用 UI&lt;/u&gt;，而不是渲染那些崩溃了的子组件树。" />
+                    <outline text="错误边界在渲染期间、生命周期方法和整个组件树的构造函数中捕获错误。" />
+                  </outline>
+                  <outline text="如何使用？">
+                    <outline text="如果一个 class 组件中定义了&lt;b&gt; &lt;/b&gt;static getDerivedStateFromError() 或 componentDidCatch() 这两个生命周期方法中的&lt;b&gt;任意一个（或两个）时，那么它就变成一个错误边界&lt;/b&gt;。当抛出错误后，请使用 static getDerivedStateFromError() 渲染备用 UI ，使用 componentDidCatch() 打印错误信息。" />
+                    <outline text="componentDidCatch(error, info) 生命周期方法">
+                      <outline text="为组件添加 &lt;b&gt; &lt;/b&gt;componentDidCatch(error, info) 生命周期回调来使其&lt;b&gt;变为异常边界&lt;/b&gt;">
+                        <outline text="info 是一个含有关&lt;b&gt;组件引发错误的栈信息对象&lt;/b&gt;，这将告诉你组件在哪里失效！让我知道你正在使用错误边界" _note="[组件栈追踪](https://zh-hans.reactjs.org/docs/error-boundaries.html#component-stack-traces)" />
+                      </outline>
+                      <outline text="componentDidCatch() 方法就好像&lt;b&gt;针对组件的 catch {}&lt;/b&gt; 代码块" />
+                    </outline>
+                    <outline text="用&lt;b&gt;高阶组件&lt;/b&gt;封装" _note="具体实现：https://github.com/notgiorgi/react-error-handler-hoc/blob/master/src/withErrorHandler.js" />
+                  </outline>
+                  <outline text="何时使用？">
+                    <outline text="当将应用升级到 React 16.x，我们需要将原本应用中没有被处理地异常统一包裹进异常边界中。譬如某个应用中可能会分为侧边栏、信息面板、会话界面、信息输入等几个不同的模块，我们可以将这些模块&lt;b&gt;包裹进不同的错误边界中&lt;/b&gt;；这样如果某个组件发生崩溃，会被其直属的异常边界捕获，从而保证剩余的部分依然处于可用状态" />
+                  </outline>
+                  <outline text="👉 注意！！">
+                    <outline text="仅有&lt;b&gt;类组件&lt;/b&gt;可以成为异常边界" />
+                    <outline text="&lt;b&gt;无法捕获&lt;/b&gt;以下场景中产生的错误">
+                      <outline text="事件处理" _note="需要在事件处理器内部捕获错误，使用普通的 JavaScript try / catch  就可以了。（即便如此错误边界也不会捕获此处的 catch 错误）" />
+                      <outline text="异步代码（如 setTimeout 或 requestAnimationFrame 回调函数）" />
+                      <outline text="服务端渲染" />
+                      <outline text="其本身的异常（当本身抛出了异常，其会冒泡传递到上一层最近的异常边界中）" />
+                    </outline>
+                    <outline text="&lt;b&gt;开发模式&lt;/b&gt;下仍会全屏弹层显示错误信息，生产模式不会" />
+                  </outline>
+                  <outline text="参考">
+                    <outline text="[错误边界 – React](https://zh-hans.reactjs.org/docs/error-boundaries.html#component-stack-traces)" />
+                    <outline text="[在 React 16 中使用高阶组件来捕获异常 - 简书](https://www.jianshu.com/p/cf85a4317f36)" />
+                  </outline>
+                </outline>
+              </outline>
+              <outline text="发布">
+                <outline text="生产环境禁止使用 devtools，在 index.js 中写入以下代码" _note="// 生产环境禁止使用 devtools&#10;if (&#10;  process.env.NODE_ENV === 'production' &amp;amp;&amp;amp;&#10;  window.__REACT_DEVTOOLS_GLOBAL_HOOK__ &amp;amp;&amp;amp;&#10;  Object.keys(window.__REACT_DEVTOOLS_GLOBAL_HOOK__._renderers).length&#10;) {&#10;  window.__REACT_DEVTOOLS_GLOBAL_HOOK__._renderers = {};&#10;}" />
+                <outline text="打生产环境包时不生成 source map" _note="devtool: isEnvProduction&#10;      ? shouldUseSourceMap&#10;        ? 'source-map' // 此处配为 false 便不会生成&#10;        : false" />
+              </outline>
+              <outline text="重构">
+                <outline text="重构冗余代码：使用 &lt;b&gt;jsinspect&lt;/b&gt; 检测前端代码库中的重复/近似代码" _note="https://github.com/danielstjules/jsinspect" />
+              </outline>
+              <outline text="v16.0">
+                <outline text="render 支持返回数组和字符串" />
+                <outline text="Error Boundaries" />
+                <outline text="createPortal" />
+                <outline text="支持自定义 DOM 属性" />
+                <outline text="减少文件体积" />
+                <outline text="Fiber" />
+              </outline>
+            </outline>
+            <outline text="TS">
+              <outline text="TypeScript &lt;b&gt;编译的时候即使报错了，还是会生成编译结果&lt;/b&gt;，我们仍然可以使用这个编译之后的文件。" _note="要在报错的时候&lt;b&gt;终止 js 文件的生成&lt;/b&gt;，可以在 tsconfig.json 中配置 noEmitOnError 即可" />
+              <outline text="基础类型">
+                <outline text="任意值（any)" _note="let notSure: any = 4;&#10;notSure = &quot;maybe a string instead&quot;;&#10;notSure = false;">
+                  <outline text="变量如果在&lt;b&gt;声明的时候&lt;/b&gt;，未指定其类型，那么它会被识别为任意值类型（注意是只声明不初始化）" _note="let something;  // 若是 let something = 7 这样被初始化了就不对了 ❌&#10;something = 'seven';&#10;something = 7;&#10;something.setName('Tom');" />
+                </outline>
+                <outline text="永不存在的值（never）">
+                  <outline text="never 类型表示的是那些永不存在的值的类型，例如，never 类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型； 变量也可能是 never 类型，当它们被永不为真的类型保护所约束时。" _note="// 返回never的函数必须存在无法达到的终点&#10;function error(message: string): never {&#10;    throw new Error(message);&#10;}&#10;&#10;// 推断的返回值类型为never&#10;function fail() {&#10;    return error(&quot;Something failed&quot;);&#10;}&#10;&#10;// 返回never的函数必须存在无法达到的终点&#10;function infiniteLoop(): never {&#10;    while (true) {&#10;    }&#10;}" />
+                </outline>
+                <outline text="空值（void）">
+                  <outline text="JS &lt;b&gt;没有&lt;/b&gt;空值（void）的概念，在 TypeScript 中，可以用 void 表示&lt;b&gt;没有任何返回值的函数&lt;/b&gt;" _note="function alertName(): void {&#10;	console.log('My name is Tom');&#10;}&#10;" />
+                  <outline text="当定义为 void 后&lt;b&gt;有返回值是不合法&lt;/b&gt;的（除 undefined、null）" _note="function demo(): void {&#10;  return 1 ❌&#10;}" />
+                </outline>
+                <outline text="null 和 undefined" _note="let u: undefined = undefined;&#10;let n: null = null;">
+                  <outline text="与 void 的区别">
+                    <outline text="&lt;b&gt;默认&lt;/b&gt;情况下 undefined 和 null 是&lt;b&gt;所有类型的子类型&lt;/b&gt;。" _note="// 这样不会报错&#10;let num: number = undefined;&#10;&#10;// 这样也不会报错&#10;let u: undefined;&#10;let num: number = u;">
+                      <outline text="当你指定了--strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们各自" />
+                    </outline>
+                    <outline text="void 类型的变量&lt;b&gt;不能&lt;/b&gt;赋值给其它类型的变量" _note="let u: void;&#10;let num: number = u;  ❌" />
+                  </outline>
+                </outline>
+                <outline text="布尔值（boolean）" _note="let isDone: boolean = false;&#10;	">
+                  <outline text="&lt;b&gt;直接调用 Boolean&lt;/b&gt; 也可以返回一个 boolean 类型" _note="let createdByBoolean: boolean = Boolean(1);" />
+                  <outline text="使用构造函数 Boolean 创造的对象&lt;b&gt;不是布尔值&lt;/b&gt;，new Boolean() 返回的是一个 Boolean 对象（除了 null 和 undefined 的其他基本类型 一样，不再赘述。）" _note="let createdByNewBoolean: boolean = new Boolean(1);" />
+                </outline>
+                <outline text="数值（number）" _note="let decLiteral: number = 6;&#10;let hexLiteral: number = 0xf00d;&#10;&#10;// ES6 中的二进制表示法&#10;let binaryLiteral: number = 0b1010;&#10;&#10;// ES6 中的八进制表示法&#10;let octalLiteral: number = 0o744;&#10;let notANumber: number = NaN;&#10;let infinityNumber: number = Infinity;" />
+                <outline text="字符串（string）" _note="let myName: string = 'Tom';&#10;&#10;// 模板字符串&#10;let sentence: string = `Hello, my name is ${myName}" />
+                <outline text="数组（2种形式）">
+                  <outline text="1、在元素类型后面接上[]，表示由此类型元素组成的一个数组" _note="let list: number[] = [1, 2, 3];&#10;&#10;let list: number[] = [1, true]; ❌" />
+                  <outline text="2、使用数组泛型，Array&amp;lt;元素类型&amp;gt;" _note="let list: Array&amp;lt;number&amp;gt; = [1, 2, 3];" />
+                </outline>
+                <outline text="元组">
+                  <outline text="表示一个&lt;b&gt;已知元素数量和类型的数组&lt;/b&gt;，各元素的类型不必相同" _note="&#10;let x: [string, number];&#10;&#10;x = ['hello', 10]; &#10;&#10;x = [10, 'hello'];  ❌" />
+                  <outline text="当访问一个&lt;b&gt;已知索引的元素&lt;/b&gt;，会得到正确的类型" _note="console.log(x[0].substr(1)); &#10;&#10;console.log(x[1].substr(1));  ❌" />
+                  <outline text="当访问一个&lt;b&gt;越界的元素&lt;/b&gt;，会使用联合类型替代" _note="x[3] = 'world'; //  字符串可以赋值给(string | number)类型&#10;&#10;console.log(x[5].toString()); //  'string' 和 'number' 都有 toString&#10;&#10;x[6] = true; //  ❌ , 布尔不是(string | number)类型" />
+                </outline>
+                <outline text="枚举（enum）">
+                  <outline text="一个集的枚举是列出某些&lt;b&gt;有穷序列集&lt;/b&gt;的所有成员的程序，或者是一种特定类型对象的计数" />
+                  <outline text="其形式为" _note="enum 枚举名{&#10;    标识符1[=整型常数],&#10;    标识符2[=整型常数],&#10;    ...&#10;    标识符N[=整型常数],&#10;}" />
+                  <outline text="枚举&lt;b&gt;没有初始化（&lt;/b&gt;即省掉&quot;=整型常数&quot;）时，则从第一个标识符开始，顺次赋给标识符。但当枚举中的&lt;b&gt;某个&lt;/b&gt;成员赋值后，&lt;b&gt;其后&lt;/b&gt;的成员按&lt;b&gt;&lt;u&gt;依次加1&lt;/u&gt;&lt;/b&gt;的规则确定其值" _note="enum string{x1, x2, x3 // x1, x2, x3 的值分别为 0,1,2。&#10;&#10;enum string{x1, x2=0, x3 // x1, x2, x3 的值分别为 0,0,2。&#10;&#10;enum string{x1, x2=2, x3 // x1, x2, x3 的值分别为 0,2,3。&#10;&#10;enum string{x1=-2, x2, x3 // x1, x2, x3 的值分别为 -2,-1,0。" />
+                  <outline text="&lt;b&gt;字符串&lt;/b&gt;枚举" _note="enum Color { Red = 'red', Green = 'green', Blue = 'blue' }&#10;let c: Color = Color.Green;&#10;&#10;console.log(c) // green" />
+                </outline>
+                <outline text="类型断言（2种形式）">
+                  <outline text="有时候你会遇到这样的情况，你会比 TypeScript 更了解某个值的详细信息。 类型断言好比其它语言里的&lt;b&gt;类型转换&lt;/b&gt;，但是不进行特殊的数据检查和解构。 它没有运行时的影响，只是在编译阶段起作用。 " />
+                  <outline text="类型断言有 2 种形式">
+                    <outline text="1、尖括号（&amp;lt;&amp;gt;）语法" />
+                  </outline>
+                </outline>
+              </outline>
+              <outline text="类型推论">
+                <outline text="&lt;b&gt;没有明确的指定类型&lt;/b&gt;，那么 TypeScript 会依照类型推论（Type Inference）的规则推断出一个类型。" _note="let myFavoriteNumber = 'seven';&#10;myFavoriteNumber = 7;  // ❌&#10;&#10;&lt;b&gt;等价于&lt;/b&gt;&#10;&#10;let myFavoriteNumber: string = 'seven';&#10;myFavoriteNumber = 7; // ❌" />
+                <outline text="如果&lt;b&gt;定义的时候没有赋值&lt;/b&gt;，不管之后有没有赋值，都会被推断成&lt;b&gt; any 类型&lt;/b&gt;而完全不被类型检查" _note="let myFavoriteNumber;&#10;myFavoriteNumber = 'seven';&#10;myFavoriteNumber = 7;" />
+              </outline>
+              <outline text="联合类型（|）">
+                <outline text="联合类型（Union Types）表示取值可以为&lt;b&gt;多种类型中的一种&lt;/b&gt;。" _note="let myVar: string | number;&#10;myVar = 7;&#10;myVar = 'seven';&#10;&#10;myVar = true;  ❌" />
+                <outline text="访问联合类型的&lt;b&gt;属性或方法&lt;/b&gt;">
+                  <outline text="当 TypeScript 不确定一个联合类型的变量到底是哪个类型的时候，我们只能访问此联合类型的所有类型里&lt;b&gt;共有的属性或方法&lt;/b&gt;" _note="function getLength(something: string | number): number {&#10;    something.toString();&#10;    something.length; // ❌ length 不是 string 和 number 的共有属性&#10;}" />
+                </outline>
+                <outline text="联合类型的&lt;b&gt;变量&lt;/b&gt;在被赋值的时候，会根据类型推论的规则推断出一个类型" _note="let myFavoriteNumber: string | number;&#10;&#10;myFavoriteNumber = 'seven';&#10;console.log(myFavoriteNumber.length); &#10;&#10;myFavoriteNumber = 7;&#10;console.log(myFavoriteNumber.length); // ❌ number 没有 length" />
+              </outline>
+              <outline text="对象的类型：接口（interface）" _note="在 TS 中，我们使用接口（Interfaces）来定义对象的类型。" />
+            </outline>
+            <outline text="Object">
+              <outline text="技巧">
+                <outline text="巧用解构赋值（...）删除元素" _note="const obj = {&#10;    a1:{name:'a'},&#10;    a2:{name:'b'}&#10;}&#10;const {a1,...cur} = obj&#10;console.log(cur)" />
+              </outline>
+            </outline>
+          </outline>
+          <outline text="术语">
+            <outline text="依赖注入" _note="核心点是&lt;b&gt;降低耦合性&lt;/b&gt;">
+              <outline text="在软件工程中，依赖注入是&lt;u&gt;一种为一类对象提供依赖的对象的设计模式&lt;/u&gt;。&lt;b&gt;被依赖的对象&lt;/b&gt;称为 Service，注入则是指将被依赖的对象 Service 传递给&lt;b&gt;使用服务的对象&lt;/b&gt;(称为Client)，从而客户 Client 不需要主动去建立(new)依赖的服务 Service，也不需要通过工厂模式去获取依赖的服务Service。" />
+              <outline text="典型的依赖注入模式中，存在以下几类&lt;b&gt;角色&lt;/b&gt;">
+                <outline text="被依赖和使用的对象，即 Service" />
+                <outline text="使用服务的客户对象，即 Client" />
+                <outline text="客户使用服务的接口定义，Interface" />
+                <outline text="注入器：负责建立服务对象并提供给 Client，通常也负责建立客户对象" />
+              </outline>
+              <outline text="例如下面类 Human 中用到一个 Father 对象，我们就说类 Human 对类 Father 有一个依赖。" _note="public class Human {&#10;  ...&#10;  Father father;&#10;  ...&#10;  public Human() {&#10;    father = new Father();&#10;  }&#10;}">
+                <outline text="以上代码存在一些问题：">
+                  <outline text="1、 如果现在要改变 father 生成方式，如需要用 new Father(String name)初始化 father，需要修改 Human 代码；" />
+                  <outline text="2、 如果想测试不同 Father 对象对 Human 的影响很困难，因为 father 的初始化被写死在了 Human 的构造函数中；" />
+                  <outline text="3、 如果new Father()过程非常缓慢，单测时我们希望用已经初始化好的 father 对象 Mock 掉这个过程也很困难。" />
+                </outline>
+              </outline>
+              <outline text="参考">
+                <outline text="根据一道 JS 依赖注入相关的编程挑战题讲解" _note="https://imweb.io/topic/5618a9d05d6f37745e8f498a" />
+                <outline text="通过 PHP 代码一步步实现依赖注入" _note="https://juejin.im/post/5ae2a019f265da0b736d5f46" />
+                <outline text="蚂蚁金服数据体验技术：分析 VSCode 中通过 TS 的实现" _note="https://juejin.im/post/5ad94f9651882567161a1bfe" />
+                <outline text="细数Javascript技术栈中的四种依赖注入https://www.cnblogs.com/front-end-ralph/p/5208045.html" />
+              </outline>
+            </outline>
+            <outline text="灰度发布" _note="降低风险，提高发布灵活度。">
+              <outline text="灰度发布是大型项目在发布时的常见方法，指在发布版本时，初始情况下，只允许&lt;b&gt;小比例&lt;/b&gt;（比如1~5%比例的用户使用），若出现问题时，可以快速回滚使用老版本，适用于主链路和访问量极大的页面。" />
+            </outline>
+          </outline>
+          <outline text="books">
+            <outline text="[计算机是怎样跑起来的 (豆瓣)](https://book.douban.com/subject/26397183/)" />
+          </outline>
+        </outline>
+        <outline text="什么是&lt;b&gt;匠心&lt;/b&gt;？" _note="匠心是对于作品而言的。&#10;&#10;匠心是倾注于作品之中的精神、情感、乃至魂魄。&#10;&#10;匠心发自于爱，是对作品视如己出的拳拳之心，是恒久忍耐又有恩慈。&#10;&#10;匠心是出于这份爱的对于完美的追求，是追求中不避艰苦，是追求中自得其乐。&#10;&#10;匠心是涵泳在作品之中的自我实现，是我与作品的相互完成，彼此造就。&#10;&#10;在匠心看来，作品是我的至亲之物，栖居着我的精神，安放着我的灵魂。&#10;&#10;匠心即是爱心 + 恒心 + 一片苦心 + 七窍玲珑心 + 出离心 + 寂寞心 + 金刚心 + 欢喜心 + 其人虽已殁，千载有余情。&#10;&#10;&#10;来源：https://www.zhihu.com/question/20349497/answer/74340840&#10;" />
+        <outline text="&lt;b&gt;时间&lt;/b&gt;是解决所有忧愁的良药。一切&lt;b&gt;迷惘困惑&lt;/b&gt;，都能在时间中找到答案。" />
+        <outline text="如果我比别人看得更远，那是因为我站在&lt;b&gt;巨人的肩上&lt;/b&gt;——艾萨克·牛顿" />
+        <outline text="在&lt;b&gt;时间&lt;/b&gt;中聆听，在时间中思考，在时间中迷茫，在时间中领悟，体会，选择……在时间中，一切爱与恨都会沉淀。顺流而下，随时间的脚步找到答案和真正的自己。" />
+        <outline text="&lt;b&gt;相助&lt;/b&gt;是一个轮回，无论出于什么目的的出手相助，只要用心和真诚，到后来都会实现自我的救助和灵魂的升华。" />
+        <outline text="如今回顾&lt;b&gt;写作&lt;/b&gt;过程，我发现自己始终在思考一个问题：站在人生的岔路口，人究竟应该怎么做？我希望读者能在掩卷时喃喃自语：我从未读过这样的小说。——东野圭吾" />
+        <outline text="&lt;b&gt;历史&lt;/b&gt;，是最好的避险秘籍" />
+        <outline text="一只锚牢牢挖下去，让漂浮于上的轮船放缓脚步，思考湍急的河流。锚这时像个巨大的逗号。如果这个逗号也降临你，你不断面对的问题涌浪出现，人生的河道思绪纷纷，试问一句，你的&lt;b&gt;思维&lt;/b&gt;之锚是什么？ #优美 " />
+        <outline text="内在动机 + 基础技能外加试错机会、人际网络决定了一位年轻人的&lt;b&gt;成长&lt;/b&gt;速度。" _note="[心智工具箱](https://mp.weixin.qq.com/s/hNw2RVPfRIJRwcnjixzG3Q)" />
+        <outline text="真正地&lt;b&gt;创造财富&lt;/b&gt;，意味着你能够顺应&lt;b&gt;人性&lt;/b&gt;，创造与市场匹配地产品，巧妙击中时代脉动。人性+技术+资本+…… ， 最终才能使得放大团队输出" _note="[心智工具箱](https://mp.weixin.qq.com/s/hNw2RVPfRIJRwcnjixzG3Q)" />
+        <outline text="现代文明发展迅速，&lt;b&gt;人性&lt;/b&gt;基本不变，但环境却变得极其复杂" />
+        <outline text="当大风刮过，尘埃落定时，人们双目四顾，懵懂间发现：自己似乎还停留在原地，还被困在&lt;b&gt;现实&lt;/b&gt;的牢笼中。 #优美 " />
+        <outline text="现代禅诗 #优美">
+          <outline text="修行之道：" _note="关注大师的言行，&#10;跟随大师的举动，&#10;和大师一并修行，&#10;领会大师的意境，&#10;成为真正的大师。" />
+        </outline>
+        <outline text="它的优秀之处并&lt;b&gt;非原创&lt;/b&gt;，它的原创之处并不优秀 ——18 世纪英国文学家约翰逊 " />
+        <outline text="一位著名的科学家（费曼）曾说过，如果你不能给你的祖母解释一样东西，说明你还&lt;b&gt;没有完全理解&lt;/b&gt;它。简化是一门艺术，它加强了基础概念与复杂想法之间的思维联系。" />
+        <outline text="完成比完美更重要">
+          <outline text="在《Art &amp;amp; Fear》这本书中，David Bayles和Ted Orland 分享了下面这个故事：" _note="“陶艺老师在开学当天宣布，他会将班级分成两组。他说，所有坐在工作室左侧的学员，都将只根据他们作品的数量来打分，所有坐在工作室右侧的学员都将只根据他们的作品的质量来打分。&#10;&#10;他的方式很简单：在课程的最后一天，他会带着他的称重计，称“根据作品数量来打分”的那组学员的作品： 制作出的罐子的总重量有50磅的评为 A，有40磅的评为 B，以此类推。然而，那些按质量评分的人只需要制作一个罐子，只要是一个完美的罐子就能评 A。&#10;&#10;到了评分的时候，一个奇怪的事实出现了：质量最高的作品都是由按数量来评分的那组学员制作的。当按照数量评分的那组学员忙于大量制作作品并从他们的错误中学习时，按质量评分的那组学员却开始为完美进行推理，最后得到的只是宏达的理论和一堆淡褐色粘土。”&#10;" />
+          <outline text="为了制作你的代表作，你需要创造大量的作品。你必须吻很多青蛙才能找到你的王子。" />
+        </outline>
+        <outline text="学习编程的最好方式是「参考学习/对比学习」，即参考他人成形的例子或项目进行学习，这样的学习既快速又实用。实例中有些内隐知识是通过看文章或文档所不能得知的。当遇到问题时使用此方法可以直观的看到他人是如何实现的，或是最终实现出来是什么样子的，其最终样子可以引导自己朝正确的方向不断尝试。 #self 19-05-30" _note="最新在学习使用前端框架 Framework7  React 过程中有曾遇到不少的问题，均是通过参考一个用此框架写的在线实例一 一解决掉的。" />
+        <outline text="放弃&lt;b&gt;学科导向&lt;/b&gt;的学习设计">
+          <outline text="阳志平老师和安猪老师近期一致的认为有效的学习设计应该是以实践为导向。" />
+        </outline>
+        <outline text="开智通识四课，各自解决的问题有所侧重：">
+          <outline text="信息分析：人获取信息的速度与准确度；" />
+          <outline text="论证分析：依据已知「信息」，推论出新的信息的速度与准确度；" />
+          <outline text="行为分析：理解人性，改变自己与他人行为模式的速度与准确度；" />
+          <outline text="决策分析：依据已知「信息」，指导个人或组织行为模式的速度与准确度。" />
+        </outline>
+        <outline text="区分&lt;b&gt;知识与技能的区别&lt;/b&gt;。知识是可以学到的，但是技能只能习得。 不能把技能当知识学。——《5分钟商学院》" />
+      </outline>
+    </outline>
+  </body>
+</opml>
