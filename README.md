@@ -27,3 +27,6 @@ https://mp.weixin.qq.com/s/POJoWGzX0372fnzlrYfxtQ
 密码：9kmy
 
 https://m.youtube.com/channel/UCHQ5HCmL77sF52QJ-M6i4-Q
+
+animal
+[CatPusic - YouTube](https://www.youtube.com/channel/UCyIqcxz-vR_o2GK4HWuZL8w/about)
