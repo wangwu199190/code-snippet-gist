@@ -1,6 +1,13 @@
 # code-snippet-gist
+【AE】
 
+## Joystick 'n Sliders
+[AE绑定脚本Joystick 'n Sliders使用教程（双语字幕）_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili](https://www.bilibili.com/video/av54377722/?p=1)
 https://study.163.com/course/introduction/1003863025.htm
+
+
+
+
 
 https://www.youtube.com/watch?v=YksLw37DCpc
 
